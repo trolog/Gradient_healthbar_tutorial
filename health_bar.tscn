@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://health_bar.gd" type="Script" id=1]
+[ext_resource path="res://health_point.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.540881, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.921875, 1, 0, 1, 0.21875, 1, 0, 1 )
+
+[node name="health_bar" type="HBoxContainer"]
+margin_right = 288.0
+margin_bottom = 50.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+health_gradient = SubResource( 1 )
+health_point = ExtResource( 2 )
+max_health = 15.0
